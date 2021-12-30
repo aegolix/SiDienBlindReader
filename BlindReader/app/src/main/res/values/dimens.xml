@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_btn_capture_left">4dp</dimen>
+    <dimen name="dimen_btn_capture_right">4dp</dimen>
+    <dimen name="dimen_btn_capture_top">4dp</dimen>
+    <dimen name="dimen_btn_capture_bottom">4dp</dimen>
+
+    <dimen name="dimen_tv_ocr_text_height">100dp</dimen>
+    <dimen name="dimen_tv_ocr_text_left">4dp</dimen>
+    <dimen name="dimen_tv_ocr_text_right">4dp</dimen>
+    <dimen name="dimen_tv_ocr_text_bottom">2dp</dimen>
+    <dimen name="dimen_tv_ocr_text_padding_left">4dp</dimen>
+    <dimen name="dimen_tv_ocr_text_padding_top">4dp</dimen>
+    <dimen name="dimen_tv_ocr_text_padding_right">4dp</dimen>
+    <dimen name="dimen_tv_ocr_text_padding_bottom">4dp</dimen>
+</resources>

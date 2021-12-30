@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.sydien.blindreader.CameraPreview
+            android:id="@+id/textureview_camera_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.sydien.blindreader.CameraPreview>
+
+        <LinearLayout
+            android:id="@+id/cl_controller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_group_control_btns"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.15"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btn_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_btn_capture_left"
+                    android:layout_marginTop="@dimen/dimen_btn_capture_top"
+                    android:layout_marginEnd="@dimen/dimen_btn_capture_right"
+                    android:layout_marginBottom="@dimen/dimen_btn_capture_bottom"
+                    android:layout_weight="0.5"
+                    android:text="@string/string_btn_capture"
+                    android:background="@drawable/bg_with_border_button"
+                    android:textColor="@color/uiTextColor"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btn_play_voice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/dimen_btn_capture_left"
+                    android:layout_marginTop="@dimen/dimen_btn_capture_top"
+                    android:layout_marginEnd="@dimen/dimen_btn_capture_right"
+                    android:layout_marginBottom="@dimen/dimen_btn_capture_bottom"
+                    android:layout_weight="0.5"
+                    android:text="@string/string_btn_play_voice"
+                    android:background="@drawable/bg_with_border_button"
+                    android:textColor="@color/uiTextColor"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_ocr_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dimen_tv_ocr_text_height"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="@dimen/dimen_tv_ocr_text_left"
+                android:layout_marginEnd="@dimen/dimen_tv_ocr_text_right"
+                android:layout_marginBottom="@dimen/dimen_tv_ocr_text_bottom"
+                android:layout_weight="0.85"
+                android:maxHeight="@dimen/dimen_tv_ocr_text_height"
+                android:paddingStart="@dimen/dimen_tv_ocr_text_padding_left"
+                android:paddingTop="@dimen/dimen_tv_ocr_text_padding_top"
+                android:paddingEnd="@dimen/dimen_tv_ocr_text_padding_right"
+                android:paddingBottom="@dimen/dimen_tv_ocr_text_padding_bottom"
+                android:text="@string/string_tv_ocr_text_default"
+                android:textColor="@color/uiTextColor"
+                android:scrollbars="vertical|horizontal"
+                android:background="@drawable/bg_with_border_textview"
+                android:textAlignment="center"
+                android:gravity="center_vertical|center_horizontal"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
